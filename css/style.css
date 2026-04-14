@@ -14,17 +14,22 @@ body {
   perspective: 400px;
 }
 
+.parent {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 16px;
+  perspective: 200px;
+  transform: rotateY(30deg);
+  transform-style: flat;
+}
+
 .box {
   width: 100px;
   height: 100px;
   background: linear-gradient(blue, red);
   border-radius: 16px;
-  transform: rotate(0deg);
-  transform-origin: center center;
-  transition: all 1s ease;
-}
-.box:hover {
-  transform: rotate(180deg);
+  transform: rotateX(60deg);
 }
 
 /*# sourceMappingURL=style.css.map */
