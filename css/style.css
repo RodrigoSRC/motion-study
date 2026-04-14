@@ -19,7 +19,12 @@ body {
   height: 100px;
   background: linear-gradient(blue, red);
   border-radius: 16px;
-  transform: rotateX(30deg);
+  transform: rotate(0deg);
+  transform-origin: center center;
+  transition: all 1s ease;
+}
+.box:hover {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */
