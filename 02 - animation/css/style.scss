@@ -39,10 +39,18 @@ body {
   // border-radius: 16px;
 
   // transform: rotateX(60deg);
+
+  animation-name: box;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  // animation-fill-mode: ;
 }
 
 @keyframes box {
-  from {
+  0% {
+    width: 100px;
+  }
+  50% {
     width: 0px;
   }
   to {
