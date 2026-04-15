@@ -43,17 +43,19 @@ body {
   animation-name: box;
   animation-duration: 2s;
   animation-iteration-count: 2;
-  // animation-fill-mode: ;
+  animation-fill-mode: normal;
+  animation-delay: 2s;
+  animation-timing-function: ease;
 }
 
 @keyframes box {
   0% {
-    width: 100px;
-  }
-  50% {
     width: 0px;
   }
+  // 50% {
+  //   width: 0px;
+  // }
   to {
-    width: 100px;
+    width: 150px;
   }
 }
