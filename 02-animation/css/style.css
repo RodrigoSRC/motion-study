@@ -20,16 +20,28 @@ body {
   background-color: #ccc;
   border-radius: 16px;
   perspective: 200px;
-  transform: rotateY(30deg);
-  transform-style: flat;
+  transform-style: preserve-3d;
 }
 
 .box {
   width: 100px;
   height: 100px;
   background: linear-gradient(blue, red);
-  border-radius: 16px;
-  transform: rotateX(60deg);
+  animation-name: box;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-fill-mode: normal;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes box {
+  0% {
+    width: 0px;
+  }
+  to {
+    width: 150px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
