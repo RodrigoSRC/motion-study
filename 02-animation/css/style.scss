@@ -30,14 +30,13 @@ body {
 
   transform-style: preserve-3d;
 
-  animation: parent 10s ease infinite alternate;
+  animation: parent 15s cubic-bezier(0, 1, 1, 0.61) infinite alternate;
 }
 
 .box {
   width: 100px;
   height: 100px;
 
-  background: linear-gradient(blue, red);
   // border-radius: 16px;
 
   // transform: rotateX(60deg);
@@ -51,7 +50,9 @@ body {
 
   // animation: box 3s cubic-bezier(0, 1, 1, 0) infinite alternate;
 
-  animation: box 3s ease infinite alternate;
+  animation:
+    box 5s cubic-bezier(0, 1, 1, 0.61) infinite alternate,
+    change-color 1s cubic-bezier(0, 1, 1, 0.61) infinite alternate;
 }
 
 @keyframes box {
@@ -60,6 +61,15 @@ body {
   }
   to {
     transform: rotateX(360deg);
+  }
+}
+
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
   }
 }
 
