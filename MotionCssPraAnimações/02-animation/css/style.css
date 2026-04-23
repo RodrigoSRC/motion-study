@@ -20,28 +20,38 @@ body {
   background-color: #ccc;
   border-radius: 16px;
   perspective: 200px;
+  transform: rotateY(30deg);
   transform-style: preserve-3d;
+  animation: parent 15s cubic-bezier(0, 1, 1, 0.61) infinite alternate;
 }
 
 .box {
   width: 100px;
   height: 100px;
-  background: linear-gradient(blue, red);
-  animation-name: box;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
-  animation-fill-mode: normal;
-  animation-delay: 2s;
-  animation-timing-function: ease;
+  animation: box 5s cubic-bezier(0, 1, 1, 0.61) infinite alternate, change-color 1s cubic-bezier(0, 1, 1, 0.61) infinite alternate;
 }
 
 @keyframes box {
   0% {
-    width: 0px;
+    transform: rotateX(0deg);
   }
   to {
-    width: 150px;
+    transform: rotateX(360deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+@keyframes parent {
+  0% {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
